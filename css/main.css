@@ -175,7 +175,7 @@ a {
 	height: auto;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 80px;
+	padding-top: 50px;
 }
 
 #infos h2 {
@@ -204,7 +204,7 @@ a {
   color: #4Fa1ef;
   font-size: 18px;
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom:20px;
   letter-spacing: 8px;
   padding-left: 2px;
   font-family: 'Open Sans', sans-serif;
@@ -216,7 +216,7 @@ a {
 	text-align: justify;
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
-	padding-bottom: 30px;
+	padding-bottom:10px;
 	font-weight: lighter;
 }
 
@@ -291,7 +291,7 @@ a {
 }
 
 .journey2 {
-	  margin-top: 10px; 
+	  margin-top: 5px; 
 	  color: #535353;
 	  text-decoration: none;
 	  font-family: 'Open Sans', sans-serif;
@@ -325,7 +325,7 @@ a {
 	height: auto;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 80px;
+	padding-top: 50px;
 }
 
 #characters h2 {
@@ -335,7 +335,6 @@ a {
   font-size: 36px;
   font-family: 'Merriweather', serif;
   letter-spacing: 10px;
-  padding-bottom: 25px;
   border-bottom: 1px solid #4Fa1ef;
 }
 
@@ -464,11 +463,9 @@ a {
 
 
 .explanation {
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 	text-align: justify;
-	padding-top: 40px;
-	padding-bottom: 30px;
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
@@ -581,15 +578,15 @@ a {
 }
 
 #world .containt {
-	width: 60vw;
+	width: 100vw;
 	height: auto;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 80px;
+	padding-top: 50px;
 }
 
 #chooseW {
-    margin-top: 8vh;
+    margin-top: 5vh;
 }
 
 #world h2 {
@@ -770,7 +767,6 @@ background: url("../img/worlds/bgScene3.png") repeat;
   margin: 0 auto;
   text-align: justify;
   padding-top: 0px;
-  padding-bottom: 30px;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
