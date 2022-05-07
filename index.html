@@ -1,173 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Journey</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="icon" type="image/png" href="img/favicon.png">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-</head>
-<body>
-	<div id="site">
-		<div id="div">
-			<div id="home">
-				<div class="calc">
-					<div class="containt">
-						<h2>Just Run</h2>
-						<h1>Journey</h1>
-						
-						<div class="arrow">
-							<p><a href="#infos">Let's Start !</a></p>
-								<a href="#infos"><i class="fa fa-angle-down fa-2x floating"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="infos">
-				<div class="containt">
-					<h2><a href="#home" class="linkH">Journey</a></h2>
-					<h3>About</h3>					
-					<p> 
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s					</p>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s					</p>
-
-					<div class="htp">						
-						<div class="notice">
-							<img src="./img/site/bg.jpg" alt="">
-						</div>
-					</div>
-					<div style="clear:both"></div>
-					<a href="#characters" class="journey">Continue !</a>
-					<div style="clear:both"></div>
-					<br>
-					<a href="#home" class="journey2"><i class="fa fa-angle-up fa-2x floating"></i></a>
-				</div>
-			</div>
-			<div id="characters">
-				<div class="containt">
-					<h2><a href="#home" class="linkH">Journey</a></h2>
-					<h3>Select your player</h3>
-
-					<div class="choose">
-						<div id="b">
-							<a href="#world" onclick="worldParams.perso=1" class="persoselect">
-								<div class="blue"><span class="persoSb">Parna</span></div>
-							</a>
-						</div>
-						<div id="r">
-							<a href="#world" onclick="worldParams.perso=2" class="persoselect">
-								<div class="red"><span class="persoSr">Rittika</span></div>
-							</a>
-						</div>
-						<div id="g">
-							<a href="#world" onclick="worldParams.perso=3" class="persoselect">
-								<div class="green"><span class="persoSg">Jyotirmoy</span></div>
-							</a>
-						</div>
-					</div>
-					<p class="explanation">To continue, click on Parna, Rittika or Jyotirmoy, there is no difference in characteristics between each of them, only a difference in the color of clothes! !</p>
-					
-					<a href="#infos" class="journey2"><i class="fa fa-angle-up fa-2x floating"></i></a>
-				</div>
-			</div>
-			<div id="world">
-				<div class="containt">
-					<h2><a href="#home" class="linkH">Journey</a></h2>
-					<h3>Select your world</h3>
-				</div>				
-				<div id="chooseW">					
-					<a href="#game" class="aW">
-						<div id="w1" class="worldselect" onclick="worldParams.world=1;worldParams.level=100;worldParams.difficulty=12; gameStart()">
-							<div class="world">
-								<div class="champ">
-									<p class="titleW">Pirates of the Caribbean</p>
-									<p class="pW">Score : 100</p>
-								</div>
-							</div>
-						</div>
-					</a>
-					<a href="#game" class="aW">
-						<div id="w2" class="worldselect" onclick="worldParams.world=2;worldParams.level=120;worldParams.difficulty=10; gameStart()">
-							<div class="world">
-								<div class="champ">
-									<p class="titleW">Ice Age</p>
-									<p class="pW">Score : 120</p>
-								</div>
-							</div>
-						</div>
-					</a>
-					<a href="#game" class="aW">
-						<div id="w3" class="worldselect" onclick="worldParams.world=3;worldParams.level=160;worldParams.difficulty=8; gameStart()">
-							<div class="world">
-								<div class="champ">
-									<p class="titleW">Barren Land</p>
-									<p class="pW">Score : 160</p>
-								</div>
-							</div>
-						</div>
-					</a>
-					<a href="#game" class="aW">
-						<div id="w4" class="worldselect" onclick="worldParams.world=4;worldParams.level=200;worldParams.difficulty=6; gameStart()">
-							<div class="world">
-								<div class="champ">
-									<p class="titleW">Haunted Land</p>
-									<p class="pW">Score : 200</p>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>			  
-			</div>				
-		</div>
-	</div>
-
-
-	<div id="game">
-		<header>
-			<nav>
-				<ul class="left">
-					<li><button onclick="gameRestart()" id="worldrestart">Restart</button></li>
-					<li>|</li>
-					<li><a href="https://www.facebook.com/pages/" target="_blank"><i class="fa fa-facebook linkG"></i></a></li>
-					<li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter linkG"></i></a></li>
-				</ul>
-				<ul class="right">
-					<li>Score : <span id="scoreCounter">0</span></li>
-					<li>|</li>
-					<li><button id="noSound" onclick="document.getElementById('player').volume=0;"><i class="fa fa-volume-off fa-2x linkG"></i></button></li>
-					<li><button id="yesSound" onclick="document.getElementById('player').volume=1;"><i class="fa fa-volume-up fa-2x linkG"></i></button></li>
-				</ul>
-			</nav>
-		</header>
-
-		<div class="overlay">
-			<h3>PAUSE</h3>
-			<h5>Press SPACE to continue</h5>
-		</div>
-
-		<ul class="parallax">
-			<li class="parallax-layer"></li>
-		</ul>
-		<div id="obstacles"></div>
-		<div id="grounds"></div>
-		<div id="perso" data-hitbox="true"></div>
-	</div>
-
-	<div id="deadScreen">
-		<h2>Journey</h2>
-		<h3>You are dead</h3>
-		<div class="container">
-		    <div></div>
-		    <div></div>
-		</div>
-	</div>
-	
-	<script src="./scripts/site/jquery2.js"></script>
-	<script src="./scripts/site/jquery.js"></script>
-	<script src="./scripts/site/scroll.js"></script>
-	<script type="text/javascript" src="./scripts/game.js"></script>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <title>Journey</title>
+      <link rel="stylesheet" type="text/css" href="css/reset.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="icon" type="image/png" href="img/favicon.png">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <div id="site">
+         <div id="div">
+            <div id="home">
+               <div class="calc">
+                  <div class="containt">
+                     <h2>Just Run</h2>
+                     <h1>Journey</h1>
+                     <div class="arrow">
+                        <p><a href="#infos">Let's Start !</a></p>
+                        <a href="#infos"><i class="fa fa-angle-down fa-2x floating"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="infos">
+               <div class="containt">
+                  <h2><a href="#home" class="linkH">Journey</a></h2>
+                  <h3>About</h3>
+                  <p> 
+                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s					
+                  </p>
+                  <p>
+                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s					
+                  </p>
+                  <div class="htp">
+                     <div class="notice">
+                        <img src="./img/site/bg.jpg" alt="">
+                     </div>
+                  </div>
+                  <div style="clear:both"></div>
+                  <a href="#characters" class="journey">Continue !</a>
+                  <div style="clear:both"></div>
+                  <br>
+                  <a href="#home" class="journey2"><i class="fa fa-angle-up fa-2x floating"></i></a>
+               </div>
+            </div>
+            <div id="characters">
+               <div class="containt">
+                  <h2><a href="#home" class="linkH">Journey</a></h2>
+                  <h3>Select your player</h3>
+                  <div class="choose">
+                     <div id="b">
+                        <a href="#world" onclick="worldParams.perso=1" class="persoselect">
+                           <div class="blue"><span class="persoSb">Parna</span></div>
+                        </a>
+                     </div>
+                     <div id="r">
+                        <a href="#world" onclick="worldParams.perso=2" class="persoselect">
+                           <div class="red"><span class="persoSr">Rittika</span></div>
+                        </a>
+                     </div>
+                     <div id="g">
+                        <a href="#world" onclick="worldParams.perso=3" class="persoselect">
+                           <div class="green"><span class="persoSg">Jyotirmoy</span></div>
+                        </a>
+                     </div>
+                  </div>
+                  <p class="explanation">To continue, click on Parna, Rittika or Jyotirmoy, there is no difference in characteristics between each of them, only a difference in the color of clothes! !</p>
+                  <a href="#infos" class="journey2"><i class="fa fa-angle-up fa-2x floating"></i></a>
+               </div>
+            </div>
+            <div id="world">
+               <div class="containt">
+                  <h2><a href="#home" class="linkH">Journey</a></h2>
+                  <h3>Select your world</h3>
+               </div>
+               <div id="chooseW">
+                  <a href="#game" class="aW">
+                     <div id="w1" class="worldselect" onclick="worldParams.world=1;worldParams.level=100;worldParams.difficulty=12; gameStart()">
+                        <div class="world">
+                           <div class="champ">
+                              <p class="titleW">Pirates of the Caribbean</p>
+                              <p class="pW">Score : 100</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#game" class="aW">
+                     <div id="w2" class="worldselect" onclick="worldParams.world=2;worldParams.level=120;worldParams.difficulty=10; gameStart()">
+                        <div class="world">
+                           <div class="champ">
+                              <p class="titleW">Ice Age</p>
+                              <p class="pW">Score : 120</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#game" class="aW">
+                     <div id="w3" class="worldselect" onclick="worldParams.world=3;worldParams.level=160;worldParams.difficulty=8; gameStart()">
+                        <div class="world">
+                           <div class="champ">
+                              <p class="titleW">Barren Land</p>
+                              <p class="pW">Score : 160</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#game" class="aW">
+                     <div id="w4" class="worldselect" onclick="worldParams.world=4;worldParams.level=200;worldParams.difficulty=6; gameStart()">
+                        <div class="world">
+                           <div class="champ">
+                              <p class="titleW">Haunted Land</p>
+                              <p class="pW">Score : 200</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="game">
+         <header>
+            <nav>
+               <ul class="left">
+                  <li><button onclick="gameRestart()" id="worldrestart">Restart</button></li>
+                  <li>|</li>
+                  <li><a href="https://www.facebook.com/pages/" target="_blank"><i class="fa fa-facebook linkG"></i></a></li>
+                  <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter linkG"></i></a></li>
+               </ul>
+               <ul class="right">
+                  <li>Score : <span id="scoreCounter">0</span></li>
+                  <li>|</li>
+                  <li><button id="noSound" onclick="document.getElementById('player').volume=0;"><i class="fa fa-volume-off fa-2x linkG"></i></button></li>
+                  <li><button id="yesSound" onclick="document.getElementById('player').volume=1;"><i class="fa fa-volume-up fa-2x linkG"></i></button></li>
+               </ul>
+            </nav>
+         </header>
+         <div class="overlay">
+            <h3>PAUSE</h3>
+            <h5>Press SPACE to continue</h5>
+         </div>
+         <ul class="parallax">
+            <li class="parallax-layer"></li>
+         </ul>
+         <div id="obstacles"></div>
+         <div id="grounds"></div>
+         <div id="perso" data-hitbox="true"></div>
+      </div>
+      <div id="deadScreen">
+         <h2>Journey</h2>
+         <h3>You are dead</h3>
+         <div class="container">
+            <div></div>
+            <div></div>
+         </div>
+      </div>
+      <script src="./scripts/site/jquery2.js"></script>
+      <script src="./scripts/site/jquery.js"></script>
+      <script src="./scripts/site/scroll.js"></script>
+      <script type="text/javascript" src="./scripts/game.js"></script>
+   </body>
 </html>
